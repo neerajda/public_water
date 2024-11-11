@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Water & Sustainability App</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Page Styling */
+        body {
+            background-color: #f1f3f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Container */
+        .app-container {
+            display: flex;
+            gap: 25px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* App Section Styles */
+        .app-section {
+            width: 300px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .app-section:hover {
+            transform: scale(1.03);
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-item {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .info-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        /* Expandable Content */
+        .expandable {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Specific Section Colors */
+        .water-quality {
+            background-color: #e0f7fa;
+            color: #00695c;
+        }
+        
+        .health-alerts {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .sewage-management {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+
+        /* Button Styling */
+        .learn-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+
+        .learn-more:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- Water Quality Tracking Section -->
+        <div class="app-section water-quality" onclick="toggleExpand(this)">
+            <div class="icon">💧</div>
+            <div class="section-title">Water Quality</div>
+            <div class="info-item"><strong>Source:</strong> River XYZ</div>
+            <div class="info-item"><strong>pH Level:</strong> 7.2 (Neutral)</div>
+            <div class="info-item"><strong>Contaminants:</strong> None Detected</div>
+            <div class="info-item"><strong>Last Test Date:</strong> October 5, 2023</div>
+            <div class="info-item"><strong>Next Test Due:</strong> November 5, 2023</div>
+            <a class="learn-more" onclick="showDetails(event)">View Detailed Report</a>
+            <div class="expandable">The latest test indicates no harmful contaminants. The water is safe for general usage and drinking after boiling.</div>
+        </div>
+        
+        <!-- Health Alerts Section -->
+        <div class="app-section health-alerts" onclick="toggleExpand(this)">
+            <div class="icon">⚕️</div>
+            <div class="section-title">Health Alerts</div>
+            <div class="info-item"><strong>Current Risk Level:</strong> Low</div>
+            <div class="info-item"><strong>Recent Alerts:</strong></div>
+            <ul class="info-list">
+                <li>Dysentery outbreak reported in nearby area (October 2)</li>
+                <li>Cholera alert lifted (September 28)</li>
+            </ul>
+            <div class="info-item"><strong>Prevention Tips:</strong></div>
+            <ul class="info-list">
+                <li>Boil water before drinking</li>
+                <li>Regular hand washing with soap</li>
+            </ul>
+            <a class="learn-more" onclick="showDetails(event)">Health & Safety Tips</a>
+            <div class="expandable">Ensure to filter or boil drinking water. Wash fruits and vegetables before consumption and maintain hygiene practices.</div>
+        </div>
+        
+        <!-- Sewage Management Section -->
+        <div class="app-section sewage-management" onclick="toggleExpand(this)">
+            <div class="icon">🚰</div>
+            <div class="section-title">Sewage Management</div>
+            <div class="info-item"><strong>Current Status:</strong> Normal</div>
+            <div class="info-item"><strong>Discharge Points:</strong></div>
+            <ul class="info-list">
+                <li>Point A: Fully Operational</li>
+                <li>Point B: Under Maintenance</li>
+            </ul>
+            <div class="info-item"><strong>Last Inspection:</stro
+
